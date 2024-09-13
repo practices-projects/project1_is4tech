@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
+import { Dog } from '../../models/dog.model';
 import { DogsService } from '../../services/dogs.service';
-import { Dog } from '../../models/dog.model'
 
 @Component({
   selector: 'app-dogs',
@@ -12,7 +12,7 @@ export class DogsComponent {
   inputText: string = '';
   noSpacesText: string = '';
 
-  constructor(private dogService: DogsService) { }
+  constructor(private dogService: DogsService) {}
 
   ngOnInit(): void {
     this.getDogImage();
