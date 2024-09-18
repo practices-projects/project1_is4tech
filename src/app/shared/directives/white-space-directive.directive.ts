@@ -12,10 +12,4 @@ export class WhiteSpaceDirectiveDirective {
     const input = this.el.nativeElement.value;
     this.el.nativeElement.value = input.replace(/^\s+|\s+$/g, '');
   }
-
-  @HostListener('blur', ['$event'])
-  onBlurChange(event: Event): void {
-    const input = this.el.nativeElement.value;
-    this.el.nativeElement.value = input.replace(/^\s+|\s+$/g, '');
-  }
 }

@@ -9,8 +9,6 @@ import { DogsService } from '../../services/dogs.service';
 })
 export class DogsComponent {
   dogImageUrl: string = '';
-  inputText: string = '';
-  noSpacesText: string = '';
 
   constructor(private dogService: DogsService) {}
 
@@ -22,9 +20,5 @@ export class DogsComponent {
     this.dogService.getDogs().subscribe((data: Dog) => {
       this.dogImageUrl = data.message;
     });
-  }
-
-  submitText(): void {
-    this.noSpacesText = this.inputText;
   }
 }
